@@ -22,11 +22,16 @@
         {% endif %}
 
         {# Global stylesheets #}
-        <link rel="stylesheet" type="text/css" href="{% static 'css/what2cook.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/headers.css' %}">
 
         {% block extra_css %}
-        {# Override this in templates to add extra stylesheets #}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/what2cook.css' %}">
         {% endblock %}
+
+        {% block end_of_head %}
+        {% endblock  %}
     </head>
 
     <body class="{% block body_class %}{% endblock %}">
